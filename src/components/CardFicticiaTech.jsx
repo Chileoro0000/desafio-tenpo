@@ -21,8 +21,13 @@ const cards = [
 ];
 
 const CardGallery = () => {
-
   const [selectedCard, setSelectedCard] = useState(null);
+
+  const handleCardClick = (card) => {
+    if (window.innerWidth > 768) {
+      setSelectedCard(card);
+    }
+  };
 
   return (
     <StyledWrapper>
@@ -32,7 +37,7 @@ const CardGallery = () => {
             className="card"
             key={index}
             style={{ backgroundImage: `url(${card.img})`, animationDelay: `${index * 0.2}s` }}
-            onClick={() => setSelectedCard(card)}
+            onClick={() => handleCardClick(card)}
           >
             <div className="shine" style={{ animationDelay: `${index * 2}s` }} />
           </div>
@@ -236,8 +241,8 @@ const StyledWrapper = styled.div`
   /* Responsive */
   @media (max-width: 768px) {
     .card {
-      width: 160px;
-      height: 260px;
+      width: 120px;
+      height: 190px;
     }
 
     .modal-text h2 {
@@ -294,8 +299,8 @@ const StyledWrapper = styled.div`
 
   @media (max-width: 480px) {
     .card {
-      width: 140px;
-      height: 230px;
+      width: 100px;
+      height: 160px;
     }
 
     .buttons {
