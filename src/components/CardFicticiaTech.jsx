@@ -100,9 +100,11 @@ const StyledWrapper = styled.div`
 
   .card-container {
     display: flex;
-    gap: 1.5rem;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1rem;
+    padding: 0 1rem;
+    max-width: 100%;
   }
 
   .card {

@@ -8,7 +8,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['graphie', 'sans-serif'],
-        heading: ['Montserrat', 'sans-serif']
+        heading: ['graphie', 'sans-serif']
       },
       colors: {
         primary: {
