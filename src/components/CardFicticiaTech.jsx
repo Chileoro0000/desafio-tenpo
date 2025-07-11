@@ -21,7 +21,7 @@ const cards = [
 ];
 
 const CardGallery = () => {
-  
+
   const [selectedCard, setSelectedCard] = useState(null);
 
   return (
@@ -240,23 +240,52 @@ const StyledWrapper = styled.div`
       height: 260px;
     }
 
-    .modal-content {
-      flex-direction: column;
-      text-align: center;
-    }
-
     .modal-text h2 {
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
 
     .modal-text p {
       font-size: 0.95rem;
     }
 
+    .modal-img {
+      order: -1; /* Mueve la imagen arriba */
+      margin-bottom: 1rem;
+    }
+
+    .modal-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0;
+    }
+
+    .modal-img {
+      order: -1;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
     .modal-img img {
-      max-width: 100%;
+      max-width: 140px;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .modal-text {
+      padding: 0 1rem;
+    }
+
+
+    .modal-img img {
+      max-width: 250px;
+      width: 100%;
       height: auto;
     }
+
 
     .buttons {
       justify-content: center;
@@ -269,24 +298,28 @@ const StyledWrapper = styled.div`
       height: 230px;
     }
 
-    .modal {
-      padding: 1.5rem 1rem;
-    }
-
-    .modal-text h2 {
-      font-size: 1.25rem;
-    }
-
-    .modal-text p {
-      font-size: 0.9rem;
-    }
-
     .buttons {
       flex-direction: column;
       gap: 0.75rem;
     }
 
-    
+    .modal-img img {
+      max-width: 200px;
+    }
+
+    .modal-text h2 {
+      font-size: 1.1rem;
+    }
+
+    .modal-text p {
+      font-size: 0.8rem;
+      line-height: 1.4;
+    }
+
+    .modal {
+      padding: 1rem;
+    }
+
     .primary,
     .secondary {
       width: 100%;

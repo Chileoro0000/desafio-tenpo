@@ -29,7 +29,7 @@ export default function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Muestras funcionalidades
+          Nuestras funcionalidades
         </motion.h2>
 
         <div className="grid md:grid-cols-3 gap-10">
